@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Delayed Jobs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @delayed_jobs.each do |delayed_job| %>
+      <tr>
+        <td><%= link_to 'Show', delayed_job %></td>
+        <td><%= link_to 'Edit', edit_delayed_job_path(delayed_job) %></td>
+        <td><%= link_to 'Destroy', delayed_job, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Delayed Job', new_delayed_job_path %>
