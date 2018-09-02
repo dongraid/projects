@@ -2,7 +2,9 @@ PATH
   remote: .
   specs:
     crud_jobs (0.1.0)
+      bootstrap-sass
       delayed_job_active_record
+      jquery-rails
       rails (~> 5.1.6)
 
 GEM
@@ -137,9 +139,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  bootstrap-sass
   crud_jobs!
-  jquery-rails
   sqlite3
 
 BUNDLED WITH

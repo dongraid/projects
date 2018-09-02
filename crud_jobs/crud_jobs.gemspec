@@ -18,6 +18,8 @@ Gem::Specification.new do |s|
 
   s.add_dependency "rails", "~> 5.1.6"
   s.add_dependency "delayed_job_active_record"
+  s.add_dependency "bootstrap-sass"
+  s.add_dependency "jquery-rails"
 
   s.add_development_dependency "sqlite3"
 end
