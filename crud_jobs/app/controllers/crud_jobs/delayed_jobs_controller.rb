@@ -6,7 +6,7 @@ module CrudJobs
 
     # GET /delayed_jobs
     def index
-      @delayed_jobs = DelayedJob.all
+      @delayed_jobs = CrudJobs::DelayedJob.all
     end
 
     # GET /delayed_jobs/1
@@ -15,7 +15,7 @@ module CrudJobs
 
     # GET /delayed_jobs/new
     def new
-      @delayed_job = DelayedJob.new
+      @delayed_job = CrudJobs::DelayedJob.new
     end
 
     # GET /delayed_jobs/1/edit
@@ -24,7 +24,7 @@ module CrudJobs
 
     # POST /delayed_jobs
     def create
-      @delayed_job = DelayedJob.new(delayed_job_params)
+      @delayed_job = CrudJobs::DelayedJob.new(delayed_job_params)
 
       if @delayed_job.save
         redirect_to @delayed_job, notice: 'Delayed job was successfully created.'
@@ -51,7 +51,7 @@ module CrudJobs
     private
       # Use callbacks to share common setup or constraints between actions.
       def set_delayed_job
-        @delayed_job = DelayedJob.find(params[:id])
+        @delayed_job = CrudJobs::DelayedJob.find(params[:id])
       end
 
       # Only allow a trusted parameter "white list" through.
